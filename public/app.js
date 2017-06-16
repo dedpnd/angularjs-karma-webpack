@@ -69,23 +69,23 @@ var app =
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
 
 
-let app = __WEBPACK_IMPORTED_MODULE_0_angular___default.a.module("myApp", []);;
+var _angular = __webpack_require__(2);
 
-app.component('qwe', {
-    template: '',
-    controller: function () {
-        this.my_fun = () => {
-            return 1;
-        };
-    }
+var _angular2 = _interopRequireDefault(_angular);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var app = _angular2.default.module("myApp", []);;
+
+app.service('Calc', function () {
+    this.sum = function (a, b) {
+        return a + b;
+    };
 });
 
 /***/ }),

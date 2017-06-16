@@ -49,9 +49,14 @@ module.exports = {
                 loader: "file-loader"
             },
             {
-                test: /\.js$/,
+                test: /\.js?$/,
                 exclude: [/node_modules/],
-                loader: 'babel-loader'
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['env']
+                    }
+                }
             },
         ]
     },
